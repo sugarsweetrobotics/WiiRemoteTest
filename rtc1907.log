@@ -1,0 +1,312 @@
+2013-05-20 21:28:48,616 manager INFO 1.1.0
+2013-05-20 21:28:48,616 manager INFO Copyright (C) 2003-2010
+2013-05-20 21:28:48,616 manager INFO   Noriaki Ando
+2013-05-20 21:28:48,616 manager INFO   Intelligent Systems Research Institute, AIST
+2013-05-20 21:28:48,616 manager INFO Manager starting.
+2013-05-20 21:28:48,616 manager INFO Starting local logging.
+2013-05-20 21:28:48,616 manager TRACE Manager.initORB()
+2013-05-20 21:28:48,616 manager DEBUG corba.args: 
+2013-05-20 21:28:48,616 manager DEBUG corba.endpoint: 
+2013-05-20 21:28:48,617 manager DEBUG manager.is_master: NO
+2013-05-20 21:28:48,617 manager DEBUG corba.id: omniORB
+2013-05-20 21:28:48,617 manager PARANOID ORB options: 
+2013-05-20 21:28:48,618 manager TRACE Manager.initNaming()
+2013-05-20 21:28:48,619 manager TRACE Register Naming Server: corba/localhost
+2013-05-20 21:28:48,619 manager.namingmanager TRACE NamingManager::registerNameServer(corba, localhost)
+2013-05-20 21:28:48,619 manager.namingmanager TRACE createNamingObj(method = corba, nameserver = localhost)
+2013-05-20 21:28:48,619 manager TRACE Manager.getORB()
+2013-05-20 21:28:48,620 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2013-05-20 21:28:48,620 manager TRACE Manager.initFactories()
+2013-05-20 21:28:48,620 manager TRACE Manager.initExecContext()
+2013-05-20 21:28:48,620 manager TRACE Manager.registerECFactory(PeriodicExecutionContext)
+2013-05-20 21:28:48,621 manager TRACE Manager.registerECFactory(ExtTrigExecutionContext)
+2013-05-20 21:28:48,621 manager TRACE Manager.registerECFactory(OpenHRPExecutionContext)
+2013-05-20 21:28:48,621 manager TRACE Manager.initComposite()
+2013-05-20 21:28:48,621 manager TRACE Manager.registerFactory(PeriodicECSharedComposite)
+2013-05-20 21:28:48,621 manager TRACE Manager.initManagerServant()
+2013-05-20 21:28:48,623 ManagerServant TRACE This manager is slave.
+2013-05-20 21:28:48,624 ManagerServant TRACE findManager(host_port = localhost:2810)
+2013-05-20 21:28:48,625 ManagerServant DEBUG corbaloc: corbaloc:iiop:localhost:2810/manager
+2013-05-20 21:28:48,625 manager TRACE Manager.getORB()
+2013-05-20 21:28:48,627 ManagerServant DEBUG Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/OpenRTM_aist/ManagerServant.py", line 934, in findManager
+    mgr = mobj._narrow(RTM.Manager)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omniORB/CORBA.py", line 798, in _narrow
+    return _omnipy.narrow(self, repoId, 1)
+TRANSIENT: CORBA.TRANSIENT(omniORB.TRANSIENT_ConnectFailed, CORBA.COMPLETED_NO)
+
+2013-05-20 21:28:48,627 ManagerServant INFO Master manager not found
+2013-05-20 21:28:48,628 manager ERROR Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/OpenRTM_aist/Manager.py", line 1751, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2013-05-20 21:28:48,628 manager TRACE Manager.activateManager()
+2013-05-20 21:28:48,628 manager TRACE Manager.getPOAManager()
+2013-05-20 21:28:48,628 manager TRACE POA Manager activated.
+2013-05-20 21:28:48,628 manager TRACE Manager.registerFactory(WiiRemoteTest)
+2013-05-20 21:28:48,629 manager TRACE Manager.createComponent(WiiRemoteTest)
+2013-05-20 21:28:48,629 manager TRACE RTC basic profile vendor: 
+2013-05-20 21:28:48,629 manager TRACE RTC basic profile category: 
+2013-05-20 21:28:48,629 manager TRACE RTC basic profile implementation_id: WiiRemoteTest
+2013-05-20 21:28:48,629 manager TRACE RTC basic profile version: 
+2013-05-20 21:28:48,630 manager TRACE Manager.getORB()
+2013-05-20 21:28:48,630 manager TRACE Manager.getPOA()
+2013-05-20 21:28:48,630 manager TRACE Manager.getORB()
+2013-05-20 21:28:48,631 manager TRACE Manager.getPOA()
+2013-05-20 21:28:48,631 rtobject TRACE getProperties()
+2013-05-20 21:28:48,631 SdoServiceAdmin TRACE SdoServiceAdmin::SdoServiceAdmin()
+2013-05-20 21:28:48,631 rtobject TRACE getProperties()
+2013-05-20 21:28:48,631 SdoServiceAdmin DEBUG sdo.service.provider.enabled_services: 
+2013-05-20 21:28:48,631 SdoServiceAdmin DEBUG sdo.service.provider.available_services: 
+2013-05-20 21:28:48,631 SdoServiceAdmin DEBUG sdo.service.consumer.enabled_services: 
+2013-05-20 21:28:48,632 SdoServiceAdmin DEBUG sdo.service.consumer.available_services: 
+2013-05-20 21:28:48,632 buttons DEBUG Port name: buttons
+2013-05-20 21:28:48,632 buttons DEBUG setting port.port_type: DataInPort
+2013-05-20 21:28:48,632 buttons DEBUG setting port.data_type: IDL:RTC/TimedBooleanSeq:1.0
+2013-05-20 21:28:48,632 accel DEBUG Port name: accel
+2013-05-20 21:28:48,632 accel DEBUG setting port.port_type: DataInPort
+2013-05-20 21:28:48,633 accel DEBUG setting port.data_type: IDL:RTC/TimedAcceleration3D:1.0
+2013-05-20 21:28:48,633 orientation DEBUG Port name: orientation
+2013-05-20 21:28:48,633 orientation DEBUG setting port.port_type: DataInPort
+2013-05-20 21:28:48,633 orientation DEBUG setting port.data_type: IDL:RTC/TimedOrientation3D:1.0
+2013-05-20 21:28:48,633 cursor DEBUG Port name: cursor
+2013-05-20 21:28:48,633 cursor DEBUG setting port.port_type: DataInPort
+2013-05-20 21:28:48,633 cursor DEBUG setting port.data_type: IDL:RTC/TimedPoint2D:1.0
+2013-05-20 21:28:48,633 distance DEBUG Port name: distance
+2013-05-20 21:28:48,634 distance DEBUG setting port.port_type: DataInPort
+2013-05-20 21:28:48,634 distance DEBUG setting port.data_type: IDL:RTC/TimedLong:1.0
+2013-05-20 21:28:48,634 ir DEBUG Port name: ir
+2013-05-20 21:28:48,634 ir DEBUG setting port.port_type: DataInPort
+2013-05-20 21:28:48,634 ir DEBUG setting port.data_type: IDL:RTC/TimedPoint2D:1.0
+2013-05-20 21:28:48,634 rumble DEBUG Port name: rumble
+2013-05-20 21:28:48,634 rumble DEBUG setting port.port_type: DataOutPort
+2013-05-20 21:28:48,634 rumble DEBUG setting dataport.data_type: IDL:RTC/TimedBoolean:1.0
+2013-05-20 21:28:48,634 rumble DEBUG available subscription_type: flush, new, periodic
+2013-05-20 21:28:48,635 leds DEBUG Port name: leds
+2013-05-20 21:28:48,635 leds DEBUG setting port.port_type: DataOutPort
+2013-05-20 21:28:48,635 leds DEBUG setting dataport.data_type: IDL:RTC/TimedBooleanSeq:1.0
+2013-05-20 21:28:48,635 leds DEBUG available subscription_type: flush, new, periodic
+2013-05-20 21:28:48,635 rtobject TRACE setProperties()
+2013-05-20 21:28:48,636 rtobject TRACE getTypeName()
+2013-05-20 21:28:48,636 rtobject TRACE setInstanceName(WiiRemoteTest0)
+2013-05-20 21:28:48,636 manager TRACE RTC Created: WiiRemoteTest
+2013-05-20 21:28:48,636 rtobject TRACE getCategory()
+2013-05-20 21:28:48,636 rtobject TRACE getTypeName()
+2013-05-20 21:28:48,636 rtobject TRACE getInstanceName()
+2013-05-20 21:28:48,636 rtobject TRACE setProperties()
+2013-05-20 21:28:48,637 rtobject TRACE setProperties()
+2013-05-20 21:28:48,637 rtobject TRACE getProperties()
+2013-05-20 21:28:48,638 rtobject TRACE getProperties()
+2013-05-20 21:28:48,638 rtobject TRACE getProperties()
+2013-05-20 21:28:48,638 rtobject TRACE getProperties()
+2013-05-20 21:28:48,639 rtobject TRACE initialize()
+2013-05-20 21:28:48,639 manager TRACE Manager.createContext()
+2013-05-20 21:28:48,639 manager TRACE ExecutionContext type: PeriodicExecutionContext
+2013-05-20 21:28:48,639 manager TRACE EC property rate: 1000.0
+2013-05-20 21:28:48,639 rtobject.periodic_ec TRACE PeriodicExecutionContext()
+2013-05-20 21:28:48,639 rtobject.periodic_ec DEBUG Actual rate: 0 [sec], 1 [usec]
+2013-05-20 21:28:48,639 rtobject.periodic_ec TRACE set_rate(1000.000000)
+2013-05-20 21:28:48,639 rtobject.periodic_ec TRACE bindComponent()
+2013-05-20 21:28:48,639 rtobject TRACE getObjRef()
+2013-05-20 21:28:48,639 rtobject TRACE bindContext()
+2013-05-20 21:28:48,639 rtobject.periodic_ec DEBUG bindContext returns id = 0
+2013-05-20 21:28:48,640 rtobject TRACE on_initialize()
+2013-05-20 21:28:48,640 rtobject TRACE addInPort(buttons)
+2013-05-20 21:28:48,640 rtobject TRACE addPort()
+2013-05-20 21:28:48,640 rtobject TRACE addPort(PortBase)
+2013-05-20 21:28:48,640 rtobject TRACE getObjRef()
+2013-05-20 21:28:48,640 rtobject TRACE get_component_profile()
+2013-05-20 21:28:48,641 buttons TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:28:48,641 buttons TRACE getPortProfile()
+2013-05-20 21:28:48,641 buttons TRACE getName() = WiiRemoteTest0.buttons
+2013-05-20 21:28:48,641 buttons TRACE getPortRef()
+2013-05-20 21:28:48,641 buttons TRACE getProfile()
+2013-05-20 21:28:48,641 buttons TRACE init()
+2013-05-20 21:28:48,641 buttons DEBUG single buffer mode.
+2013-05-20 21:28:48,641 buttons TRACE initProviders()
+2013-05-20 21:28:48,642 buttons DEBUG available providers: corba_cdr
+2013-05-20 21:28:48,642 buttons DEBUG dataflow_type push is supported
+2013-05-20 21:28:48,642 buttons TRACE initConsumers()
+2013-05-20 21:28:48,642 buttons DEBUG available consumers: corba_cdr
+2013-05-20 21:28:48,642 buttons PARANOID dataflow_type pull is supported
+2013-05-20 21:28:48,642 rtobject TRACE addInPort(accel)
+2013-05-20 21:28:48,642 rtobject TRACE addPort()
+2013-05-20 21:28:48,642 rtobject TRACE addPort(PortBase)
+2013-05-20 21:28:48,642 rtobject TRACE getObjRef()
+2013-05-20 21:28:48,642 rtobject TRACE get_component_profile()
+2013-05-20 21:28:48,642 buttons TRACE get_port_profile()
+2013-05-20 21:28:48,643 accel TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:28:48,643 accel TRACE getPortProfile()
+2013-05-20 21:28:48,643 accel TRACE getName() = WiiRemoteTest0.accel
+2013-05-20 21:28:48,643 buttons TRACE get_port_profile()
+2013-05-20 21:28:48,644 accel TRACE getPortRef()
+2013-05-20 21:28:48,644 accel TRACE getProfile()
+2013-05-20 21:28:48,644 buttons TRACE getProfile()
+2013-05-20 21:28:48,644 accel TRACE init()
+2013-05-20 21:28:48,644 accel DEBUG single buffer mode.
+2013-05-20 21:28:48,644 accel TRACE initProviders()
+2013-05-20 21:28:48,644 accel DEBUG available providers: corba_cdr
+2013-05-20 21:28:48,644 accel DEBUG dataflow_type push is supported
+2013-05-20 21:28:48,644 accel TRACE initConsumers()
+2013-05-20 21:28:48,644 accel DEBUG available consumers: corba_cdr
+2013-05-20 21:28:48,644 accel PARANOID dataflow_type pull is supported
+2013-05-20 21:28:48,644 rtobject TRACE addInPort(orientation)
+2013-05-20 21:28:48,645 rtobject TRACE addPort()
+2013-05-20 21:28:48,645 rtobject TRACE addPort(PortBase)
+2013-05-20 21:28:48,645 rtobject TRACE getObjRef()
+2013-05-20 21:28:48,645 rtobject TRACE get_component_profile()
+2013-05-20 21:28:48,645 buttons TRACE get_port_profile()
+2013-05-20 21:28:48,645 accel TRACE get_port_profile()
+2013-05-20 21:28:48,646 orientation TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:28:48,646 orientation TRACE getPortProfile()
+2013-05-20 21:28:48,646 orientation TRACE getName() = WiiRemoteTest0.orientation
+2013-05-20 21:28:48,646 buttons TRACE get_port_profile()
+2013-05-20 21:28:48,646 accel TRACE get_port_profile()
+2013-05-20 21:28:48,646 orientation TRACE getPortRef()
+2013-05-20 21:28:48,646 orientation TRACE getProfile()
+2013-05-20 21:28:48,646 buttons TRACE getProfile()
+2013-05-20 21:28:48,647 accel TRACE getProfile()
+2013-05-20 21:28:48,647 orientation TRACE init()
+2013-05-20 21:28:48,647 orientation DEBUG single buffer mode.
+2013-05-20 21:28:48,647 orientation TRACE initProviders()
+2013-05-20 21:28:48,647 orientation DEBUG available providers: corba_cdr
+2013-05-20 21:28:48,647 orientation DEBUG dataflow_type push is supported
+2013-05-20 21:28:48,647 orientation TRACE initConsumers()
+2013-05-20 21:28:48,647 orientation DEBUG available consumers: corba_cdr
+2013-05-20 21:28:48,647 orientation PARANOID dataflow_type pull is supported
+2013-05-20 21:28:48,647 rtobject TRACE addInPort(cursor)
+2013-05-20 21:28:48,647 rtobject TRACE addPort()
+2013-05-20 21:28:48,647 rtobject TRACE addPort(PortBase)
+2013-05-20 21:28:48,647 rtobject TRACE getObjRef()
+2013-05-20 21:28:48,648 rtobject TRACE get_component_profile()
+2013-05-20 21:28:48,648 buttons TRACE get_port_profile()
+2013-05-20 21:28:48,648 accel TRACE get_port_profile()
+2013-05-20 21:28:48,648 orientation TRACE get_port_profile()
+2013-05-20 21:28:48,649 cursor TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:28:48,649 cursor TRACE getPortProfile()
+2013-05-20 21:28:48,649 cursor TRACE getName() = WiiRemoteTest0.cursor
+2013-05-20 21:28:48,649 buttons TRACE get_port_profile()
+2013-05-20 21:28:48,649 accel TRACE get_port_profile()
+2013-05-20 21:28:48,649 orientation TRACE get_port_profile()
+2013-05-20 21:28:48,649 cursor TRACE getPortRef()
+2013-05-20 21:28:48,649 cursor TRACE getProfile()
+2013-05-20 21:28:48,649 buttons TRACE getProfile()
+2013-05-20 21:28:48,650 accel TRACE getProfile()
+2013-05-20 21:28:48,650 orientation TRACE getProfile()
+2013-05-20 21:28:48,650 cursor TRACE init()
+2013-05-20 21:28:48,650 cursor DEBUG single buffer mode.
+2013-05-20 21:28:48,650 cursor TRACE initProviders()
+2013-05-20 21:28:48,650 cursor DEBUG available providers: corba_cdr
+2013-05-20 21:28:48,650 cursor DEBUG dataflow_type push is supported
+2013-05-20 21:28:48,650 cursor TRACE initConsumers()
+2013-05-20 21:28:48,650 cursor DEBUG available consumers: corba_cdr
+2013-05-20 21:28:48,650 cursor PARANOID dataflow_type pull is supported
+2013-05-20 21:28:48,650 rtobject TRACE addInPort(distance)
+2013-05-20 21:28:48,650 rtobject TRACE addPort()
+2013-05-20 21:28:48,651 rtobject TRACE addPort(PortBase)
+2013-05-20 21:28:48,651 rtobject TRACE getObjRef()
+2013-05-20 21:28:48,651 rtobject TRACE get_component_profile()
+2013-05-20 21:28:48,651 buttons TRACE get_port_profile()
+2013-05-20 21:28:48,651 accel TRACE get_port_profile()
+2013-05-20 21:28:48,651 orientation TRACE get_port_profile()
+2013-05-20 21:28:48,651 cursor TRACE get_port_profile()
+2013-05-20 21:28:48,652 distance TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:28:48,652 distance TRACE getPortProfile()
+2013-05-20 21:28:48,652 distance TRACE getName() = WiiRemoteTest0.distance
+2013-05-20 21:28:48,652 buttons TRACE get_port_profile()
+2013-05-20 21:28:48,652 accel TRACE get_port_profile()
+2013-05-20 21:28:48,652 orientation TRACE get_port_profile()
+2013-05-20 21:28:48,653 cursor TRACE get_port_profile()
+2013-05-20 21:28:48,653 distance TRACE getPortRef()
+2013-05-20 21:28:48,653 distance TRACE getProfile()
+2013-05-20 21:28:48,653 buttons TRACE getProfile()
+2013-05-20 21:28:48,653 accel TRACE getProfile()
+2013-05-20 21:28:48,653 orientation TRACE getProfile()
+2013-05-20 21:28:48,653 cursor TRACE getProfile()
+2013-05-20 21:28:48,653 distance TRACE init()
+2013-05-20 21:28:48,653 distance DEBUG single buffer mode.
+2013-05-20 21:28:48,653 distance TRACE initProviders()
+2013-05-20 21:28:48,653 distance DEBUG available providers: corba_cdr
+2013-05-20 21:28:48,653 distance DEBUG dataflow_type push is supported
+2013-05-20 21:28:48,654 distance TRACE initConsumers()
+2013-05-20 21:28:48,654 distance DEBUG available consumers: corba_cdr
+2013-05-20 21:28:48,654 distance PARANOID dataflow_type pull is supported
+2013-05-20 21:28:48,654 rtobject TRACE addInPort(ir)
+2013-05-20 21:28:48,654 rtobject TRACE addPort()
+2013-05-20 21:28:48,654 rtobject TRACE addPort(PortBase)
+2013-05-20 21:28:48,654 rtobject TRACE getObjRef()
+2013-05-20 21:28:48,654 rtobject TRACE get_component_profile()
+2013-05-20 21:28:48,654 buttons TRACE get_port_profile()
+2013-05-20 21:28:48,654 accel TRACE get_port_profile()
+2013-05-20 21:28:48,654 orientation TRACE get_port_profile()
+2013-05-20 21:28:48,655 cursor TRACE get_port_profile()
+2013-05-20 21:28:48,655 distance TRACE get_port_profile()
+2013-05-20 21:28:48,656 ir TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:28:48,656 ir TRACE getPortProfile()
+2013-05-20 21:28:48,656 ir TRACE getName() = WiiRemoteTest0.ir
+2013-05-20 21:28:48,656 buttons TRACE get_port_profile()
+2013-05-20 21:28:48,656 accel TRACE get_port_profile()
+2013-05-20 21:28:48,656 orientation TRACE get_port_profile()
+2013-05-20 21:28:48,656 cursor TRACE get_port_profile()
+2013-05-20 21:28:48,656 distance TRACE get_port_profile()
+2013-05-20 21:28:48,656 ir TRACE getPortRef()
+2013-05-20 21:28:48,657 ir TRACE getProfile()
+2013-05-20 21:28:48,657 buttons TRACE getProfile()
+2013-05-20 21:28:48,657 accel TRACE getProfile()
+2013-05-20 21:28:48,657 orientation TRACE getProfile()
+2013-05-20 21:28:48,657 cursor TRACE getProfile()
+2013-05-20 21:28:48,657 distance TRACE getProfile()
+2013-05-20 21:28:48,657 ir TRACE init()
+2013-05-20 21:28:48,657 ir DEBUG single buffer mode.
+2013-05-20 21:28:48,657 ir TRACE initProviders()
+2013-05-20 21:28:48,657 ir DEBUG available providers: corba_cdr
+2013-05-20 21:28:48,657 ir DEBUG dataflow_type push is supported
+2013-05-20 21:28:48,657 ir TRACE initConsumers()
+2013-05-20 21:28:48,657 ir DEBUG available consumers: corba_cdr
+2013-05-20 21:28:48,657 ir PARANOID dataflow_type pull is supported
+2013-05-20 21:28:48,659 rtobject ERROR Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/OpenRTM_aist/RTObject.py", line 1143, in on_initialize
+    ret = self.onInitialize()
+  File "WiiRemoteTest.py", line 138, in onInitialize
+    self.addOutPort("rumbe",self._rumbeOut)
+AttributeError: WiiRemoteTest instance has no attribute '_rumbeOut'
+
+2013-05-20 21:28:48,659 manager TRACE RTC initialization failed: WiiRemoteTest
+2013-05-20 21:28:48,659 rtobject TRACE exit()
+2013-05-20 21:28:48,659 manager TRACE WiiRemoteTest was finalized
+2013-05-20 21:28:48,659 manager TRACE Manager.runManager(): blocking mode
+2013-05-20 21:28:49,627 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:28:49,627 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:28:50,639 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:28:50,639 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:28:51,650 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:28:51,650 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:28:52,662 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:28:52,663 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:28:53,674 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:28:53,674 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:28:54,683 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:28:54,684 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:28:55,694 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:28:55,695 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:28:56,706 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:28:56,707 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:28:57,716 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:28:57,716 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:28:58,726 manager TRACE Manager::shutdownOnNoRtcs()
+2013-05-20 21:28:58,727 manager TRACE Manager.getComponents()
+2013-05-20 21:28:58,727 manager TRACE Manager.shutdown()
+2013-05-20 21:28:58,727 manager TRACE Manager.shutdownComponents()
+2013-05-20 21:28:58,727 manager TRACE Manager.shutdownNaming()
+2013-05-20 21:28:58,727 manager.namingmanager TRACE NamingManager::unbindAll(): 0 names.
+2013-05-20 21:28:58,727 manager TRACE Manager.shutdownORB()
+2013-05-20 21:28:58,727 manager DEBUG No pending works of ORB. Shutting down POA and ORB.
+2013-05-20 21:28:58,727 manager DEBUG POA Manager was deactivated.
+2013-05-20 21:28:58,727 manager DEBUG POA was destroyed.
+2013-05-20 21:28:58,727 manager DEBUG ORB was shutdown.
+2013-05-20 21:28:58,727 manager TRACE Manager.runManager(): ORB was terminated
+2013-05-20 21:28:58,728 manager TRACE Manager.shutdownManager()
+2013-05-20 21:28:58,728 manager TRACE Manager.wait()
+2013-05-20 21:28:58,728 manager TRACE Manager.wait()
+2013-05-20 21:28:58,728 manager TRACE Manager.shutdownLogger()

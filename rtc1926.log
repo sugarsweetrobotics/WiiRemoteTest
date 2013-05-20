@@ -1,0 +1,798 @@
+2013-05-20 21:30:59,548 manager INFO 1.1.0
+2013-05-20 21:30:59,548 manager INFO Copyright (C) 2003-2010
+2013-05-20 21:30:59,548 manager INFO   Noriaki Ando
+2013-05-20 21:30:59,548 manager INFO   Intelligent Systems Research Institute, AIST
+2013-05-20 21:30:59,548 manager INFO Manager starting.
+2013-05-20 21:30:59,548 manager INFO Starting local logging.
+2013-05-20 21:30:59,548 manager TRACE Manager.initORB()
+2013-05-20 21:30:59,548 manager DEBUG corba.args: 
+2013-05-20 21:30:59,548 manager DEBUG corba.endpoint: 
+2013-05-20 21:30:59,548 manager DEBUG manager.is_master: NO
+2013-05-20 21:30:59,548 manager DEBUG corba.id: omniORB
+2013-05-20 21:30:59,548 manager PARANOID ORB options: 
+2013-05-20 21:30:59,549 manager TRACE Manager.initNaming()
+2013-05-20 21:30:59,550 manager TRACE Register Naming Server: corba/localhost
+2013-05-20 21:30:59,550 manager.namingmanager TRACE NamingManager::registerNameServer(corba, localhost)
+2013-05-20 21:30:59,550 manager.namingmanager TRACE createNamingObj(method = corba, nameserver = localhost)
+2013-05-20 21:30:59,550 manager TRACE Manager.getORB()
+2013-05-20 21:30:59,551 manager.namingmanager INFO NameServer connection succeeded: corba/localhost
+2013-05-20 21:30:59,551 manager TRACE Manager.initFactories()
+2013-05-20 21:30:59,551 manager TRACE Manager.initExecContext()
+2013-05-20 21:30:59,552 manager TRACE Manager.registerECFactory(PeriodicExecutionContext)
+2013-05-20 21:30:59,552 manager TRACE Manager.registerECFactory(ExtTrigExecutionContext)
+2013-05-20 21:30:59,552 manager TRACE Manager.registerECFactory(OpenHRPExecutionContext)
+2013-05-20 21:30:59,552 manager TRACE Manager.initComposite()
+2013-05-20 21:30:59,552 manager TRACE Manager.registerFactory(PeriodicECSharedComposite)
+2013-05-20 21:30:59,552 manager TRACE Manager.initManagerServant()
+2013-05-20 21:30:59,554 ManagerServant TRACE This manager is slave.
+2013-05-20 21:30:59,554 ManagerServant TRACE findManager(host_port = localhost:2810)
+2013-05-20 21:30:59,556 ManagerServant DEBUG corbaloc: corbaloc:iiop:localhost:2810/manager
+2013-05-20 21:30:59,556 manager TRACE Manager.getORB()
+2013-05-20 21:30:59,558 ManagerServant DEBUG Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/OpenRTM_aist/ManagerServant.py", line 934, in findManager
+    mgr = mobj._narrow(RTM.Manager)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omniORB/CORBA.py", line 798, in _narrow
+    return _omnipy.narrow(self, repoId, 1)
+TRANSIENT: CORBA.TRANSIENT(omniORB.TRANSIENT_ConnectFailed, CORBA.COMPLETED_NO)
+
+2013-05-20 21:30:59,558 ManagerServant INFO Master manager not found
+2013-05-20 21:30:59,559 manager ERROR Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/OpenRTM_aist/Manager.py", line 1751, in initManagerServant
+    reffile = file(self._config.getProperty("manager.refstring_path"),'w')
+IOError: [Errno 13] Permission denied: '/var/log/rtcmanager.ref'
+
+2013-05-20 21:30:59,559 manager TRACE Manager.activateManager()
+2013-05-20 21:30:59,559 manager TRACE Manager.getPOAManager()
+2013-05-20 21:30:59,559 manager TRACE POA Manager activated.
+2013-05-20 21:30:59,559 manager TRACE Manager.registerFactory(WiiRemoteTest)
+2013-05-20 21:30:59,560 manager TRACE Manager.createComponent(WiiRemoteTest)
+2013-05-20 21:30:59,560 manager TRACE RTC basic profile vendor: 
+2013-05-20 21:30:59,560 manager TRACE RTC basic profile category: 
+2013-05-20 21:30:59,560 manager TRACE RTC basic profile implementation_id: WiiRemoteTest
+2013-05-20 21:30:59,560 manager TRACE RTC basic profile version: 
+2013-05-20 21:30:59,561 manager TRACE Manager.getORB()
+2013-05-20 21:30:59,561 manager TRACE Manager.getPOA()
+2013-05-20 21:30:59,561 manager TRACE Manager.getORB()
+2013-05-20 21:30:59,561 manager TRACE Manager.getPOA()
+2013-05-20 21:30:59,562 rtobject TRACE getProperties()
+2013-05-20 21:30:59,562 SdoServiceAdmin TRACE SdoServiceAdmin::SdoServiceAdmin()
+2013-05-20 21:30:59,562 rtobject TRACE getProperties()
+2013-05-20 21:30:59,562 SdoServiceAdmin DEBUG sdo.service.provider.enabled_services: 
+2013-05-20 21:30:59,562 SdoServiceAdmin DEBUG sdo.service.provider.available_services: 
+2013-05-20 21:30:59,562 SdoServiceAdmin DEBUG sdo.service.consumer.enabled_services: 
+2013-05-20 21:30:59,563 SdoServiceAdmin DEBUG sdo.service.consumer.available_services: 
+2013-05-20 21:30:59,563 buttons DEBUG Port name: buttons
+2013-05-20 21:30:59,563 buttons DEBUG setting port.port_type: DataInPort
+2013-05-20 21:30:59,563 buttons DEBUG setting port.data_type: IDL:RTC/TimedBooleanSeq:1.0
+2013-05-20 21:30:59,563 accel DEBUG Port name: accel
+2013-05-20 21:30:59,563 accel DEBUG setting port.port_type: DataInPort
+2013-05-20 21:30:59,563 accel DEBUG setting port.data_type: IDL:RTC/TimedAcceleration3D:1.0
+2013-05-20 21:30:59,564 orientation DEBUG Port name: orientation
+2013-05-20 21:30:59,564 orientation DEBUG setting port.port_type: DataInPort
+2013-05-20 21:30:59,564 orientation DEBUG setting port.data_type: IDL:RTC/TimedOrientation3D:1.0
+2013-05-20 21:30:59,564 cursor DEBUG Port name: cursor
+2013-05-20 21:30:59,564 cursor DEBUG setting port.port_type: DataInPort
+2013-05-20 21:30:59,564 cursor DEBUG setting port.data_type: IDL:RTC/TimedPoint2D:1.0
+2013-05-20 21:30:59,564 distance DEBUG Port name: distance
+2013-05-20 21:30:59,564 distance DEBUG setting port.port_type: DataInPort
+2013-05-20 21:30:59,564 distance DEBUG setting port.data_type: IDL:RTC/TimedLong:1.0
+2013-05-20 21:30:59,565 ir DEBUG Port name: ir
+2013-05-20 21:30:59,565 ir DEBUG setting port.port_type: DataInPort
+2013-05-20 21:30:59,565 ir DEBUG setting port.data_type: IDL:RTC/TimedPoint2D:1.0
+2013-05-20 21:30:59,565 rumble DEBUG Port name: rumble
+2013-05-20 21:30:59,565 rumble DEBUG setting port.port_type: DataOutPort
+2013-05-20 21:30:59,565 rumble DEBUG setting dataport.data_type: IDL:RTC/TimedBoolean:1.0
+2013-05-20 21:30:59,565 rumble DEBUG available subscription_type: flush, new, periodic
+2013-05-20 21:30:59,565 leds DEBUG Port name: leds
+2013-05-20 21:30:59,565 leds DEBUG setting port.port_type: DataOutPort
+2013-05-20 21:30:59,566 leds DEBUG setting dataport.data_type: IDL:RTC/TimedBooleanSeq:1.0
+2013-05-20 21:30:59,566 leds DEBUG available subscription_type: flush, new, periodic
+2013-05-20 21:30:59,566 rtobject TRACE setProperties()
+2013-05-20 21:30:59,566 rtobject TRACE getTypeName()
+2013-05-20 21:30:59,566 rtobject TRACE setInstanceName(WiiRemoteTest0)
+2013-05-20 21:30:59,567 manager TRACE RTC Created: WiiRemoteTest
+2013-05-20 21:30:59,567 rtobject TRACE getCategory()
+2013-05-20 21:30:59,567 rtobject TRACE getTypeName()
+2013-05-20 21:30:59,567 rtobject TRACE getInstanceName()
+2013-05-20 21:30:59,567 rtobject TRACE setProperties()
+2013-05-20 21:30:59,568 rtobject TRACE setProperties()
+2013-05-20 21:30:59,568 rtobject TRACE getProperties()
+2013-05-20 21:30:59,570 rtobject TRACE getProperties()
+2013-05-20 21:30:59,570 rtobject TRACE getProperties()
+2013-05-20 21:30:59,570 rtobject TRACE getProperties()
+2013-05-20 21:30:59,690 rtobject TRACE initialize()
+2013-05-20 21:30:59,690 manager TRACE Manager.createContext()
+2013-05-20 21:30:59,690 manager TRACE ExecutionContext type: PeriodicExecutionContext
+2013-05-20 21:30:59,690 manager TRACE EC property rate: 1000.0
+2013-05-20 21:30:59,691 rtobject.periodic_ec TRACE PeriodicExecutionContext()
+2013-05-20 21:30:59,691 rtobject.periodic_ec DEBUG Actual rate: 0 [sec], 1 [usec]
+2013-05-20 21:30:59,691 rtobject.periodic_ec TRACE set_rate(1000.000000)
+2013-05-20 21:30:59,692 rtobject.periodic_ec TRACE bindComponent()
+2013-05-20 21:30:59,692 rtobject TRACE getObjRef()
+2013-05-20 21:30:59,692 rtobject TRACE bindContext()
+2013-05-20 21:30:59,692 rtobject.periodic_ec DEBUG bindContext returns id = 0
+2013-05-20 21:30:59,692 rtobject TRACE on_initialize()
+2013-05-20 21:30:59,693 rtobject TRACE addInPort(buttons)
+2013-05-20 21:30:59,693 rtobject TRACE addPort()
+2013-05-20 21:30:59,693 rtobject TRACE addPort(PortBase)
+2013-05-20 21:30:59,693 rtobject TRACE getObjRef()
+2013-05-20 21:30:59,693 rtobject TRACE get_component_profile()
+2013-05-20 21:30:59,695 buttons TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:30:59,695 buttons TRACE getPortProfile()
+2013-05-20 21:30:59,695 buttons TRACE getName() = WiiRemoteTest0.buttons
+2013-05-20 21:30:59,695 buttons TRACE getPortRef()
+2013-05-20 21:30:59,695 buttons TRACE getProfile()
+2013-05-20 21:30:59,696 buttons TRACE init()
+2013-05-20 21:30:59,696 buttons DEBUG single buffer mode.
+2013-05-20 21:30:59,696 buttons TRACE initProviders()
+2013-05-20 21:30:59,696 buttons DEBUG available providers: corba_cdr
+2013-05-20 21:30:59,696 buttons DEBUG dataflow_type push is supported
+2013-05-20 21:30:59,696 buttons TRACE initConsumers()
+2013-05-20 21:30:59,696 buttons DEBUG available consumers: corba_cdr
+2013-05-20 21:30:59,696 buttons PARANOID dataflow_type pull is supported
+2013-05-20 21:30:59,697 rtobject TRACE addInPort(accel)
+2013-05-20 21:30:59,697 rtobject TRACE addPort()
+2013-05-20 21:30:59,697 rtobject TRACE addPort(PortBase)
+2013-05-20 21:30:59,697 rtobject TRACE getObjRef()
+2013-05-20 21:30:59,697 rtobject TRACE get_component_profile()
+2013-05-20 21:30:59,697 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,699 accel TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:30:59,699 accel TRACE getPortProfile()
+2013-05-20 21:30:59,699 accel TRACE getName() = WiiRemoteTest0.accel
+2013-05-20 21:30:59,699 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,699 accel TRACE getPortRef()
+2013-05-20 21:30:59,699 accel TRACE getProfile()
+2013-05-20 21:30:59,699 buttons TRACE getProfile()
+2013-05-20 21:30:59,699 accel TRACE init()
+2013-05-20 21:30:59,700 accel DEBUG single buffer mode.
+2013-05-20 21:30:59,700 accel TRACE initProviders()
+2013-05-20 21:30:59,700 accel DEBUG available providers: corba_cdr
+2013-05-20 21:30:59,700 accel DEBUG dataflow_type push is supported
+2013-05-20 21:30:59,700 accel TRACE initConsumers()
+2013-05-20 21:30:59,700 accel DEBUG available consumers: corba_cdr
+2013-05-20 21:30:59,700 accel PARANOID dataflow_type pull is supported
+2013-05-20 21:30:59,700 rtobject TRACE addInPort(orientation)
+2013-05-20 21:30:59,700 rtobject TRACE addPort()
+2013-05-20 21:30:59,701 rtobject TRACE addPort(PortBase)
+2013-05-20 21:30:59,701 rtobject TRACE getObjRef()
+2013-05-20 21:30:59,701 rtobject TRACE get_component_profile()
+2013-05-20 21:30:59,701 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,701 accel TRACE get_port_profile()
+2013-05-20 21:30:59,702 orientation TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:30:59,702 orientation TRACE getPortProfile()
+2013-05-20 21:30:59,702 orientation TRACE getName() = WiiRemoteTest0.orientation
+2013-05-20 21:30:59,702 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,702 accel TRACE get_port_profile()
+2013-05-20 21:30:59,703 orientation TRACE getPortRef()
+2013-05-20 21:30:59,703 orientation TRACE getProfile()
+2013-05-20 21:30:59,703 buttons TRACE getProfile()
+2013-05-20 21:30:59,703 accel TRACE getProfile()
+2013-05-20 21:30:59,703 orientation TRACE init()
+2013-05-20 21:30:59,703 orientation DEBUG single buffer mode.
+2013-05-20 21:30:59,703 orientation TRACE initProviders()
+2013-05-20 21:30:59,703 orientation DEBUG available providers: corba_cdr
+2013-05-20 21:30:59,703 orientation DEBUG dataflow_type push is supported
+2013-05-20 21:30:59,703 orientation TRACE initConsumers()
+2013-05-20 21:30:59,703 orientation DEBUG available consumers: corba_cdr
+2013-05-20 21:30:59,703 orientation PARANOID dataflow_type pull is supported
+2013-05-20 21:30:59,704 rtobject TRACE addInPort(cursor)
+2013-05-20 21:30:59,704 rtobject TRACE addPort()
+2013-05-20 21:30:59,704 rtobject TRACE addPort(PortBase)
+2013-05-20 21:30:59,704 rtobject TRACE getObjRef()
+2013-05-20 21:30:59,704 rtobject TRACE get_component_profile()
+2013-05-20 21:30:59,704 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,704 accel TRACE get_port_profile()
+2013-05-20 21:30:59,704 orientation TRACE get_port_profile()
+2013-05-20 21:30:59,705 cursor TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:30:59,705 cursor TRACE getPortProfile()
+2013-05-20 21:30:59,705 cursor TRACE getName() = WiiRemoteTest0.cursor
+2013-05-20 21:30:59,705 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,705 accel TRACE get_port_profile()
+2013-05-20 21:30:59,705 orientation TRACE get_port_profile()
+2013-05-20 21:30:59,706 cursor TRACE getPortRef()
+2013-05-20 21:30:59,706 cursor TRACE getProfile()
+2013-05-20 21:30:59,706 buttons TRACE getProfile()
+2013-05-20 21:30:59,706 accel TRACE getProfile()
+2013-05-20 21:30:59,706 orientation TRACE getProfile()
+2013-05-20 21:30:59,706 cursor TRACE init()
+2013-05-20 21:30:59,706 cursor DEBUG single buffer mode.
+2013-05-20 21:30:59,706 cursor TRACE initProviders()
+2013-05-20 21:30:59,706 cursor DEBUG available providers: corba_cdr
+2013-05-20 21:30:59,706 cursor DEBUG dataflow_type push is supported
+2013-05-20 21:30:59,706 cursor TRACE initConsumers()
+2013-05-20 21:30:59,706 cursor DEBUG available consumers: corba_cdr
+2013-05-20 21:30:59,707 cursor PARANOID dataflow_type pull is supported
+2013-05-20 21:30:59,707 rtobject TRACE addInPort(distance)
+2013-05-20 21:30:59,707 rtobject TRACE addPort()
+2013-05-20 21:30:59,707 rtobject TRACE addPort(PortBase)
+2013-05-20 21:30:59,707 rtobject TRACE getObjRef()
+2013-05-20 21:30:59,707 rtobject TRACE get_component_profile()
+2013-05-20 21:30:59,707 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,708 accel TRACE get_port_profile()
+2013-05-20 21:30:59,708 orientation TRACE get_port_profile()
+2013-05-20 21:30:59,708 cursor TRACE get_port_profile()
+2013-05-20 21:30:59,709 distance TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:30:59,709 distance TRACE getPortProfile()
+2013-05-20 21:30:59,709 distance TRACE getName() = WiiRemoteTest0.distance
+2013-05-20 21:30:59,709 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,709 accel TRACE get_port_profile()
+2013-05-20 21:30:59,709 orientation TRACE get_port_profile()
+2013-05-20 21:30:59,710 cursor TRACE get_port_profile()
+2013-05-20 21:30:59,710 distance TRACE getPortRef()
+2013-05-20 21:30:59,710 distance TRACE getProfile()
+2013-05-20 21:30:59,710 buttons TRACE getProfile()
+2013-05-20 21:30:59,710 accel TRACE getProfile()
+2013-05-20 21:30:59,710 orientation TRACE getProfile()
+2013-05-20 21:30:59,711 cursor TRACE getProfile()
+2013-05-20 21:30:59,711 distance TRACE init()
+2013-05-20 21:30:59,711 distance DEBUG single buffer mode.
+2013-05-20 21:30:59,711 distance TRACE initProviders()
+2013-05-20 21:30:59,711 distance DEBUG available providers: corba_cdr
+2013-05-20 21:30:59,711 distance DEBUG dataflow_type push is supported
+2013-05-20 21:30:59,711 distance TRACE initConsumers()
+2013-05-20 21:30:59,711 distance DEBUG available consumers: corba_cdr
+2013-05-20 21:30:59,711 distance PARANOID dataflow_type pull is supported
+2013-05-20 21:30:59,712 rtobject TRACE addInPort(ir)
+2013-05-20 21:30:59,712 rtobject TRACE addPort()
+2013-05-20 21:30:59,712 rtobject TRACE addPort(PortBase)
+2013-05-20 21:30:59,712 rtobject TRACE getObjRef()
+2013-05-20 21:30:59,712 rtobject TRACE get_component_profile()
+2013-05-20 21:30:59,712 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,712 accel TRACE get_port_profile()
+2013-05-20 21:30:59,713 orientation TRACE get_port_profile()
+2013-05-20 21:30:59,713 cursor TRACE get_port_profile()
+2013-05-20 21:30:59,713 distance TRACE get_port_profile()
+2013-05-20 21:30:59,714 ir TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:30:59,715 ir TRACE getPortProfile()
+2013-05-20 21:30:59,715 ir TRACE getName() = WiiRemoteTest0.ir
+2013-05-20 21:30:59,715 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,715 accel TRACE get_port_profile()
+2013-05-20 21:30:59,715 orientation TRACE get_port_profile()
+2013-05-20 21:30:59,715 cursor TRACE get_port_profile()
+2013-05-20 21:30:59,716 distance TRACE get_port_profile()
+2013-05-20 21:30:59,716 ir TRACE getPortRef()
+2013-05-20 21:30:59,716 ir TRACE getProfile()
+2013-05-20 21:30:59,716 buttons TRACE getProfile()
+2013-05-20 21:30:59,716 accel TRACE getProfile()
+2013-05-20 21:30:59,716 orientation TRACE getProfile()
+2013-05-20 21:30:59,716 cursor TRACE getProfile()
+2013-05-20 21:30:59,716 distance TRACE getProfile()
+2013-05-20 21:30:59,717 ir TRACE init()
+2013-05-20 21:30:59,717 ir DEBUG single buffer mode.
+2013-05-20 21:30:59,717 ir TRACE initProviders()
+2013-05-20 21:30:59,717 ir DEBUG available providers: corba_cdr
+2013-05-20 21:30:59,717 ir DEBUG dataflow_type push is supported
+2013-05-20 21:30:59,717 ir TRACE initConsumers()
+2013-05-20 21:30:59,717 ir DEBUG available consumers: corba_cdr
+2013-05-20 21:30:59,717 ir PARANOID dataflow_type pull is supported
+2013-05-20 21:30:59,717 rtobject TRACE addOutPort(rumble)
+2013-05-20 21:30:59,718 rtobject TRACE addPort()
+2013-05-20 21:30:59,718 rtobject TRACE addPort(PortBase)
+2013-05-20 21:30:59,718 rtobject TRACE getObjRef()
+2013-05-20 21:30:59,718 rtobject TRACE get_component_profile()
+2013-05-20 21:30:59,718 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,718 accel TRACE get_port_profile()
+2013-05-20 21:30:59,718 orientation TRACE get_port_profile()
+2013-05-20 21:30:59,718 cursor TRACE get_port_profile()
+2013-05-20 21:30:59,719 distance TRACE get_port_profile()
+2013-05-20 21:30:59,719 ir TRACE get_port_profile()
+2013-05-20 21:30:59,720 rumble TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:30:59,720 rumble TRACE getPortProfile()
+2013-05-20 21:30:59,720 rumble TRACE getName() = WiiRemoteTest0.rumble
+2013-05-20 21:30:59,720 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,721 accel TRACE get_port_profile()
+2013-05-20 21:30:59,721 orientation TRACE get_port_profile()
+2013-05-20 21:30:59,721 cursor TRACE get_port_profile()
+2013-05-20 21:30:59,721 distance TRACE get_port_profile()
+2013-05-20 21:30:59,721 ir TRACE get_port_profile()
+2013-05-20 21:30:59,721 rumble TRACE getPortRef()
+2013-05-20 21:30:59,721 rumble TRACE getProfile()
+2013-05-20 21:30:59,721 buttons TRACE getProfile()
+2013-05-20 21:30:59,721 accel TRACE getProfile()
+2013-05-20 21:30:59,722 orientation TRACE getProfile()
+2013-05-20 21:30:59,722 cursor TRACE getProfile()
+2013-05-20 21:30:59,722 distance TRACE getProfile()
+2013-05-20 21:30:59,722 ir TRACE getProfile()
+2013-05-20 21:30:59,722 rumble TRACE init()
+2013-05-20 21:30:59,722 rumble TRACE initConsumers()
+2013-05-20 21:30:59,722 rumble PARANOID available InPortConsumer: corba_cdr
+2013-05-20 21:30:59,722 rumble PARANOID dataflow_type push is supported
+2013-05-20 21:30:59,722 rumble TRACE initProviders()
+2013-05-20 21:30:59,722 rumble PARANOID available OutPortProviders: corba_cdr
+2013-05-20 21:30:59,722 rumble DEBUG dataflow_type pull is supported
+2013-05-20 21:30:59,722 rtobject TRACE addOutPort(leds)
+2013-05-20 21:30:59,723 rtobject TRACE addPort()
+2013-05-20 21:30:59,723 rtobject TRACE addPort(PortBase)
+2013-05-20 21:30:59,723 rtobject TRACE getObjRef()
+2013-05-20 21:30:59,723 rtobject TRACE get_component_profile()
+2013-05-20 21:30:59,723 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,723 accel TRACE get_port_profile()
+2013-05-20 21:30:59,723 orientation TRACE get_port_profile()
+2013-05-20 21:30:59,723 cursor TRACE get_port_profile()
+2013-05-20 21:30:59,723 distance TRACE get_port_profile()
+2013-05-20 21:30:59,724 ir TRACE get_port_profile()
+2013-05-20 21:30:59,724 rumble TRACE get_port_profile()
+2013-05-20 21:30:59,725 leds TRACE setOwner(WiiRemoteTest0)
+2013-05-20 21:30:59,725 leds TRACE getPortProfile()
+2013-05-20 21:30:59,725 leds TRACE getName() = WiiRemoteTest0.leds
+2013-05-20 21:30:59,725 buttons TRACE get_port_profile()
+2013-05-20 21:30:59,725 accel TRACE get_port_profile()
+2013-05-20 21:30:59,726 orientation TRACE get_port_profile()
+2013-05-20 21:30:59,726 cursor TRACE get_port_profile()
+2013-05-20 21:30:59,726 distance TRACE get_port_profile()
+2013-05-20 21:30:59,726 ir TRACE get_port_profile()
+2013-05-20 21:30:59,727 rumble TRACE get_port_profile()
+2013-05-20 21:30:59,727 leds TRACE getPortRef()
+2013-05-20 21:30:59,727 leds TRACE getProfile()
+2013-05-20 21:30:59,727 buttons TRACE getProfile()
+2013-05-20 21:30:59,727 accel TRACE getProfile()
+2013-05-20 21:30:59,727 orientation TRACE getProfile()
+2013-05-20 21:30:59,728 cursor TRACE getProfile()
+2013-05-20 21:30:59,728 distance TRACE getProfile()
+2013-05-20 21:30:59,728 ir TRACE getProfile()
+2013-05-20 21:30:59,728 rumble TRACE getProfile()
+2013-05-20 21:30:59,728 leds TRACE init()
+2013-05-20 21:30:59,728 leds TRACE initConsumers()
+2013-05-20 21:30:59,728 leds PARANOID available InPortConsumer: corba_cdr
+2013-05-20 21:30:59,729 leds PARANOID dataflow_type push is supported
+2013-05-20 21:30:59,729 leds TRACE initProviders()
+2013-05-20 21:30:59,729 leds PARANOID available OutPortProviders: corba_cdr
+2013-05-20 21:30:59,729 leds DEBUG dataflow_type pull is supported
+2013-05-20 21:30:59,729 rtobject DEBUG EC[0] starting.
+2013-05-20 21:30:59,729 rtobject.periodic_ec TRACE start()
+2013-05-20 21:30:59,729 rtobject TRACE on_startup(0)
+2013-05-20 21:30:59,730 rtobject TRACE onStartup(0)
+2013-05-20 21:30:59,730 rtobject.periodic_ec TRACE svc()
+2013-05-20 21:30:59,730 manager TRACE RTC initialization succeeded: WiiRemoteTest
+2013-05-20 21:30:59,730 rtobject TRACE getInstanceName()
+2013-05-20 21:30:59,731 manager TRACE Manager.registerComponent(WiiRemoteTest0)
+2013-05-20 21:30:59,731 rtobject TRACE getInstanceName()
+2013-05-20 21:30:59,731 rtobject TRACE getNamingNames()
+2013-05-20 21:30:59,731 manager TRACE Bind name: asura.local.host_cxt/WiiRemoteTest0.rtc
+2013-05-20 21:30:59,731 manager.namingmanager TRACE NamingManager::bindObject(asura.local.host_cxt/WiiRemoteTest0.rtc)
+2013-05-20 21:30:59,731 manager.namingoncorba TRACE bindObject(name = asura.local.host_cxt/WiiRemoteTest0.rtc, rtobj or mgr)
+2013-05-20 21:30:59,731 rtobject TRACE getObjRef()
+2013-05-20 21:30:59,732 manager TRACE Manager.runManager(): blocking mode
+2013-05-20 21:31:00,556 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:00,556 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:00,993 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:00,993 rtobject.periodic_ec PARANOID Execution: 0.000094 [s]
+2013-05-20 21:31:00,993 rtobject.periodic_ec PARANOID Sleep:     0.000906 [s]
+2013-05-20 21:31:00,993 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:00,995 rtobject.periodic_ec PARANOID Slept:     0.001184 [s]
+2013-05-20 21:31:01,565 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:01,565 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:02,253 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:02,254 rtobject.periodic_ec PARANOID Execution: 0.000102 [s]
+2013-05-20 21:31:02,254 rtobject.periodic_ec PARANOID Sleep:     0.000898 [s]
+2013-05-20 21:31:02,254 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:02,255 rtobject.periodic_ec PARANOID Slept:     0.001149 [s]
+2013-05-20 21:31:02,576 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:02,576 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:03,517 rtobject TRACE get_component_profile()
+2013-05-20 21:31:03,517 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:03,517 buttons TRACE get_port_profile()
+2013-05-20 21:31:03,517 rtobject.periodic_ec PARANOID Execution: 0.000086 [s]
+2013-05-20 21:31:03,518 rtobject.periodic_ec PARANOID Sleep:     0.000914 [s]
+2013-05-20 21:31:03,518 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:03,518 accel TRACE get_port_profile()
+2013-05-20 21:31:03,518 orientation TRACE get_port_profile()
+2013-05-20 21:31:03,519 cursor TRACE get_port_profile()
+2013-05-20 21:31:03,519 distance TRACE get_port_profile()
+2013-05-20 21:31:03,519 ir TRACE get_port_profile()
+2013-05-20 21:31:03,519 rumble TRACE get_port_profile()
+2013-05-20 21:31:03,519 rtobject.periodic_ec PARANOID Slept:     0.001391 [s]
+2013-05-20 21:31:03,520 leds TRACE get_port_profile()
+2013-05-20 21:31:03,585 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:03,585 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:04,595 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:04,595 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:04,783 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:04,783 rtobject.periodic_ec PARANOID Execution: 0.000133 [s]
+2013-05-20 21:31:04,783 rtobject.periodic_ec PARANOID Sleep:     0.000867 [s]
+2013-05-20 21:31:04,783 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:04,785 rtobject.periodic_ec PARANOID Slept:     0.001321 [s]
+2013-05-20 21:31:05,605 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:05,605 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:05,951 rtobject TRACE get_component_profile()
+2013-05-20 21:31:05,951 buttons TRACE get_port_profile()
+2013-05-20 21:31:05,951 accel TRACE get_port_profile()
+2013-05-20 21:31:05,952 orientation TRACE get_port_profile()
+2013-05-20 21:31:05,952 cursor TRACE get_port_profile()
+2013-05-20 21:31:05,952 distance TRACE get_port_profile()
+2013-05-20 21:31:05,952 ir TRACE get_port_profile()
+2013-05-20 21:31:05,953 rumble TRACE get_port_profile()
+2013-05-20 21:31:05,953 leds TRACE get_port_profile()
+2013-05-20 21:31:06,066 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:06,066 rtobject.periodic_ec PARANOID Execution: 0.000224 [s]
+2013-05-20 21:31:06,066 rtobject.periodic_ec PARANOID Sleep:     0.000776 [s]
+2013-05-20 21:31:06,066 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:06,068 rtobject.periodic_ec PARANOID Slept:     0.001230 [s]
+2013-05-20 21:31:06,483 rtobject TRACE get_component_profile()
+2013-05-20 21:31:06,483 buttons TRACE get_port_profile()
+2013-05-20 21:31:06,483 accel TRACE get_port_profile()
+2013-05-20 21:31:06,484 orientation TRACE get_port_profile()
+2013-05-20 21:31:06,484 cursor TRACE get_port_profile()
+2013-05-20 21:31:06,484 distance TRACE get_port_profile()
+2013-05-20 21:31:06,484 ir TRACE get_port_profile()
+2013-05-20 21:31:06,485 rumble TRACE get_port_profile()
+2013-05-20 21:31:06,485 leds TRACE get_port_profile()
+2013-05-20 21:31:06,617 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:06,617 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:06,788 rtobject TRACE get_component_profile()
+2013-05-20 21:31:06,788 buttons TRACE get_port_profile()
+2013-05-20 21:31:06,789 accel TRACE get_port_profile()
+2013-05-20 21:31:06,789 orientation TRACE get_port_profile()
+2013-05-20 21:31:06,789 cursor TRACE get_port_profile()
+2013-05-20 21:31:06,790 distance TRACE get_port_profile()
+2013-05-20 21:31:06,790 ir TRACE get_port_profile()
+2013-05-20 21:31:06,790 rumble TRACE get_port_profile()
+2013-05-20 21:31:06,791 leds TRACE get_port_profile()
+2013-05-20 21:31:07,070 rtobject TRACE get_component_profile()
+2013-05-20 21:31:07,070 buttons TRACE get_port_profile()
+2013-05-20 21:31:07,070 accel TRACE get_port_profile()
+2013-05-20 21:31:07,070 orientation TRACE get_port_profile()
+2013-05-20 21:31:07,071 cursor TRACE get_port_profile()
+2013-05-20 21:31:07,071 distance TRACE get_port_profile()
+2013-05-20 21:31:07,071 ir TRACE get_port_profile()
+2013-05-20 21:31:07,072 rumble TRACE get_port_profile()
+2013-05-20 21:31:07,072 leds TRACE get_port_profile()
+2013-05-20 21:31:07,302 rtobject TRACE get_component_profile()
+2013-05-20 21:31:07,302 buttons TRACE get_port_profile()
+2013-05-20 21:31:07,302 accel TRACE get_port_profile()
+2013-05-20 21:31:07,302 orientation TRACE get_port_profile()
+2013-05-20 21:31:07,302 cursor TRACE get_port_profile()
+2013-05-20 21:31:07,302 distance TRACE get_port_profile()
+2013-05-20 21:31:07,303 ir TRACE get_port_profile()
+2013-05-20 21:31:07,303 rumble TRACE get_port_profile()
+2013-05-20 21:31:07,303 leds TRACE get_port_profile()
+2013-05-20 21:31:07,309 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:07,309 rtobject.periodic_ec PARANOID Execution: 0.000096 [s]
+2013-05-20 21:31:07,309 rtobject.periodic_ec PARANOID Sleep:     0.000904 [s]
+2013-05-20 21:31:07,309 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:07,311 rtobject.periodic_ec PARANOID Slept:     0.001247 [s]
+2013-05-20 21:31:07,514 rtobject TRACE get_component_profile()
+2013-05-20 21:31:07,514 buttons TRACE get_port_profile()
+2013-05-20 21:31:07,514 accel TRACE get_port_profile()
+2013-05-20 21:31:07,515 orientation TRACE get_port_profile()
+2013-05-20 21:31:07,515 cursor TRACE get_port_profile()
+2013-05-20 21:31:07,515 distance TRACE get_port_profile()
+2013-05-20 21:31:07,515 ir TRACE get_port_profile()
+2013-05-20 21:31:07,515 rumble TRACE get_port_profile()
+2013-05-20 21:31:07,515 leds TRACE get_port_profile()
+2013-05-20 21:31:07,627 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:07,627 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:07,787 rtobject TRACE get_component_profile()
+2013-05-20 21:31:07,787 buttons TRACE get_port_profile()
+2013-05-20 21:31:07,787 accel TRACE get_port_profile()
+2013-05-20 21:31:07,787 orientation TRACE get_port_profile()
+2013-05-20 21:31:07,788 cursor TRACE get_port_profile()
+2013-05-20 21:31:07,788 distance TRACE get_port_profile()
+2013-05-20 21:31:07,788 ir TRACE get_port_profile()
+2013-05-20 21:31:07,788 rumble TRACE get_port_profile()
+2013-05-20 21:31:07,789 leds TRACE get_port_profile()
+2013-05-20 21:31:08,558 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:08,558 rtobject.periodic_ec PARANOID Execution: 0.000091 [s]
+2013-05-20 21:31:08,558 rtobject.periodic_ec PARANOID Sleep:     0.000909 [s]
+2013-05-20 21:31:08,558 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:08,559 rtobject.periodic_ec PARANOID Slept:     0.001249 [s]
+2013-05-20 21:31:08,590 rtobject TRACE get_component_profile()
+2013-05-20 21:31:08,590 buttons TRACE get_port_profile()
+2013-05-20 21:31:08,590 accel TRACE get_port_profile()
+2013-05-20 21:31:08,591 orientation TRACE get_port_profile()
+2013-05-20 21:31:08,591 cursor TRACE get_port_profile()
+2013-05-20 21:31:08,591 distance TRACE get_port_profile()
+2013-05-20 21:31:08,591 ir TRACE get_port_profile()
+2013-05-20 21:31:08,592 rumble TRACE get_port_profile()
+2013-05-20 21:31:08,592 leds TRACE get_port_profile()
+2013-05-20 21:31:08,637 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:08,637 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:09,011 rtobject TRACE get_component_profile()
+2013-05-20 21:31:09,012 buttons TRACE get_port_profile()
+2013-05-20 21:31:09,012 accel TRACE get_port_profile()
+2013-05-20 21:31:09,012 orientation TRACE get_port_profile()
+2013-05-20 21:31:09,012 cursor TRACE get_port_profile()
+2013-05-20 21:31:09,013 distance TRACE get_port_profile()
+2013-05-20 21:31:09,013 ir TRACE get_port_profile()
+2013-05-20 21:31:09,013 rumble TRACE get_port_profile()
+2013-05-20 21:31:09,013 leds TRACE get_port_profile()
+2013-05-20 21:31:09,647 manager TRACE Manager::shutdownOnNoRtcs()
+2013-05-20 21:31:09,647 manager TRACE Manager.getComponents()
+2013-05-20 21:31:09,647 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:09,647 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:09,647 manager.namingmanager TRACE NamingManager::update()
+2013-05-20 21:31:09,647 manager.namingoncorba TRACE isAlive()
+2013-05-20 21:31:09,811 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:09,812 rtobject.periodic_ec PARANOID Execution: 0.000064 [s]
+2013-05-20 21:31:09,812 rtobject.periodic_ec PARANOID Sleep:     0.000936 [s]
+2013-05-20 21:31:09,812 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:09,813 rtobject.periodic_ec PARANOID Slept:     0.001189 [s]
+2013-05-20 21:31:10,659 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:10,659 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:11,085 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:11,085 rtobject.periodic_ec PARANOID Execution: 0.000066 [s]
+2013-05-20 21:31:11,085 rtobject.periodic_ec PARANOID Sleep:     0.000934 [s]
+2013-05-20 21:31:11,085 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:11,086 rtobject.periodic_ec PARANOID Slept:     0.001207 [s]
+2013-05-20 21:31:11,668 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:11,669 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:12,338 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:12,338 rtobject.periodic_ec PARANOID Execution: 0.000070 [s]
+2013-05-20 21:31:12,338 rtobject.periodic_ec PARANOID Sleep:     0.000930 [s]
+2013-05-20 21:31:12,338 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:12,339 rtobject.periodic_ec PARANOID Slept:     0.001213 [s]
+2013-05-20 21:31:12,678 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:12,678 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:13,606 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:13,606 rtobject.periodic_ec PARANOID Execution: 0.000101 [s]
+2013-05-20 21:31:13,606 rtobject.periodic_ec PARANOID Sleep:     0.000899 [s]
+2013-05-20 21:31:13,607 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:13,608 rtobject.periodic_ec PARANOID Slept:     0.001376 [s]
+2013-05-20 21:31:13,687 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:13,688 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:14,154 rtobject TRACE get_component_profile()
+2013-05-20 21:31:14,155 buttons TRACE get_port_profile()
+2013-05-20 21:31:14,155 accel TRACE get_port_profile()
+2013-05-20 21:31:14,155 orientation TRACE get_port_profile()
+2013-05-20 21:31:14,155 cursor TRACE get_port_profile()
+2013-05-20 21:31:14,155 distance TRACE get_port_profile()
+2013-05-20 21:31:14,155 ir TRACE get_port_profile()
+2013-05-20 21:31:14,155 rumble TRACE get_port_profile()
+2013-05-20 21:31:14,155 leds TRACE get_port_profile()
+2013-05-20 21:31:14,699 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:14,699 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:14,874 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:14,875 rtobject.periodic_ec PARANOID Execution: 0.000216 [s]
+2013-05-20 21:31:14,875 rtobject.periodic_ec PARANOID Sleep:     0.000784 [s]
+2013-05-20 21:31:14,875 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:14,876 rtobject.periodic_ec PARANOID Slept:     0.001292 [s]
+2013-05-20 21:31:15,647 rtobject TRACE get_component_profile()
+2013-05-20 21:31:15,647 buttons TRACE get_port_profile()
+2013-05-20 21:31:15,647 accel TRACE get_port_profile()
+2013-05-20 21:31:15,647 orientation TRACE get_port_profile()
+2013-05-20 21:31:15,648 cursor TRACE get_port_profile()
+2013-05-20 21:31:15,648 distance TRACE get_port_profile()
+2013-05-20 21:31:15,648 ir TRACE get_port_profile()
+2013-05-20 21:31:15,649 rumble TRACE get_port_profile()
+2013-05-20 21:31:15,649 leds TRACE get_port_profile()
+2013-05-20 21:31:15,708 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:15,708 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:16,140 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:16,140 rtobject.periodic_ec PARANOID Execution: 0.000103 [s]
+2013-05-20 21:31:16,140 rtobject.periodic_ec PARANOID Sleep:     0.000897 [s]
+2013-05-20 21:31:16,140 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:16,142 rtobject.periodic_ec PARANOID Slept:     0.001164 [s]
+2013-05-20 21:31:16,718 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:16,718 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:17,423 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:17,423 rtobject.periodic_ec PARANOID Execution: 0.000093 [s]
+2013-05-20 21:31:17,423 rtobject.periodic_ec PARANOID Sleep:     0.000907 [s]
+2013-05-20 21:31:17,423 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:17,424 rtobject.periodic_ec PARANOID Slept:     0.001230 [s]
+2013-05-20 21:31:17,730 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:17,730 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:18,698 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:18,698 rtobject.periodic_ec PARANOID Execution: 0.000102 [s]
+2013-05-20 21:31:18,699 rtobject.periodic_ec PARANOID Sleep:     0.000898 [s]
+2013-05-20 21:31:18,699 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:18,700 rtobject.periodic_ec PARANOID Slept:     0.001302 [s]
+2013-05-20 21:31:18,738 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:18,738 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:19,749 manager TRACE Manager::shutdownOnNoRtcs()
+2013-05-20 21:31:19,749 manager TRACE Manager.getComponents()
+2013-05-20 21:31:19,750 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:19,750 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:19,750 manager.namingmanager TRACE NamingManager::update()
+2013-05-20 21:31:19,750 manager.namingoncorba TRACE isAlive()
+2013-05-20 21:31:19,977 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:19,977 rtobject.periodic_ec PARANOID Execution: 0.000102 [s]
+2013-05-20 21:31:19,977 rtobject.periodic_ec PARANOID Sleep:     0.000898 [s]
+2013-05-20 21:31:19,977 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:19,978 rtobject.periodic_ec PARANOID Slept:     0.001274 [s]
+2013-05-20 21:31:20,759 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:20,759 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:21,255 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:21,255 rtobject.periodic_ec PARANOID Execution: 0.000133 [s]
+2013-05-20 21:31:21,255 rtobject.periodic_ec PARANOID Sleep:     0.000867 [s]
+2013-05-20 21:31:21,255 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:21,257 rtobject.periodic_ec PARANOID Slept:     0.001388 [s]
+2013-05-20 21:31:21,770 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:21,771 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:22,540 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:22,540 rtobject.periodic_ec PARANOID Execution: 0.000100 [s]
+2013-05-20 21:31:22,541 rtobject.periodic_ec PARANOID Sleep:     0.000900 [s]
+2013-05-20 21:31:22,541 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:22,542 rtobject.periodic_ec PARANOID Slept:     0.001163 [s]
+2013-05-20 21:31:22,780 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:22,780 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:23,211 rtobject TRACE get_component_profile()
+2013-05-20 21:31:23,211 buttons TRACE get_port_profile()
+2013-05-20 21:31:23,211 accel TRACE get_port_profile()
+2013-05-20 21:31:23,211 orientation TRACE get_port_profile()
+2013-05-20 21:31:23,212 cursor TRACE get_port_profile()
+2013-05-20 21:31:23,212 distance TRACE get_port_profile()
+2013-05-20 21:31:23,212 ir TRACE get_port_profile()
+2013-05-20 21:31:23,212 rumble TRACE get_port_profile()
+2013-05-20 21:31:23,212 leds TRACE get_port_profile()
+2013-05-20 21:31:23,790 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:23,790 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:23,804 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:23,804 rtobject.periodic_ec PARANOID Execution: 0.000093 [s]
+2013-05-20 21:31:23,804 rtobject.periodic_ec PARANOID Sleep:     0.000907 [s]
+2013-05-20 21:31:23,805 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:23,806 rtobject.periodic_ec PARANOID Slept:     0.001170 [s]
+2013-05-20 21:31:24,439 rtobject TRACE get_component_profile()
+2013-05-20 21:31:24,440 buttons TRACE get_port_profile()
+2013-05-20 21:31:24,440 accel TRACE get_port_profile()
+2013-05-20 21:31:24,440 orientation TRACE get_port_profile()
+2013-05-20 21:31:24,440 cursor TRACE get_port_profile()
+2013-05-20 21:31:24,440 distance TRACE get_port_profile()
+2013-05-20 21:31:24,441 ir TRACE get_port_profile()
+2013-05-20 21:31:24,441 rumble TRACE get_port_profile()
+2013-05-20 21:31:24,441 leds TRACE get_port_profile()
+2013-05-20 21:31:24,799 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:24,800 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:25,067 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:25,068 rtobject.periodic_ec PARANOID Execution: 0.000134 [s]
+2013-05-20 21:31:25,068 rtobject.periodic_ec PARANOID Sleep:     0.000866 [s]
+2013-05-20 21:31:25,068 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:25,069 rtobject.periodic_ec PARANOID Slept:     0.001326 [s]
+2013-05-20 21:31:25,809 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:25,809 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:26,330 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:26,330 rtobject.periodic_ec PARANOID Execution: 0.000097 [s]
+2013-05-20 21:31:26,330 rtobject.periodic_ec PARANOID Sleep:     0.000903 [s]
+2013-05-20 21:31:26,330 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:26,332 rtobject.periodic_ec PARANOID Slept:     0.001178 [s]
+2013-05-20 21:31:26,818 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:26,818 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:27,622 rtobject.periodic_ec PARANOID Period:    0.001000 [s]
+2013-05-20 21:31:27,623 rtobject.periodic_ec PARANOID Execution: 0.000112 [s]
+2013-05-20 21:31:27,623 rtobject.periodic_ec PARANOID Sleep:     0.000888 [s]
+2013-05-20 21:31:27,623 rtobject.periodic_ec PARANOID sleeping...
+2013-05-20 21:31:27,624 rtobject.periodic_ec PARANOID Slept:     0.001274 [s]
+2013-05-20 21:31:27,833 manager VERBOSE Manager.cleanupComponents()
+2013-05-20 21:31:27,835 manager VERBOSE 0 components are marked as finalized.
+2013-05-20 21:31:27,932 manager TRACE Manager.shutdown()
+2013-05-20 21:31:27,932 manager TRACE Manager.shutdownComponents()
+2013-05-20 21:31:27,932 rtobject TRACE exit()
+2013-05-20 21:31:27,932 rtobject.periodic_ec TRACE deactivate_component()
+2013-05-20 21:31:27,933 rtobject.periodic_ec TRACE stop()
+2013-05-20 21:31:27,933 rtobject TRACE on_shutdown(0)
+2013-05-20 21:31:27,933 rtobject TRACE onShutdown(0)
+2013-05-20 21:31:27,933 rtobject TRACE finalize()
+2013-05-20 21:31:27,933 rtobject TRACE on_finalize()
+2013-05-20 21:31:27,933 rtobject TRACE onFinalize()
+2013-05-20 21:31:27,934 rtobject TRACE shutdown()
+2013-05-20 21:31:27,934 rtobject TRACE finalizePorts()
+2013-05-20 21:31:27,934 buttons TRACE deactivateInterfaces()
+2013-05-20 21:31:27,934 accel TRACE deactivateInterfaces()
+2013-05-20 21:31:27,934 orientation TRACE deactivateInterfaces()
+2013-05-20 21:31:27,934 cursor TRACE deactivateInterfaces()
+2013-05-20 21:31:27,934 distance TRACE deactivateInterfaces()
+2013-05-20 21:31:27,934 ir TRACE deactivateInterfaces()
+2013-05-20 21:31:27,935 rumble TRACE deactivateInterfaces()
+2013-05-20 21:31:27,935 leds TRACE deactivateInterfaces()
+2013-05-20 21:31:27,935 leds TRACE disconnect_all()
+2013-05-20 21:31:27,935 leds DEBUG disconnecting 0 connections.
+2013-05-20 21:31:27,935 leds TRACE getProfile()
+2013-05-20 21:31:27,935 buttons TRACE get_port_profile()
+2013-05-20 21:31:27,935 accel TRACE get_port_profile()
+2013-05-20 21:31:27,935 orientation TRACE get_port_profile()
+2013-05-20 21:31:27,936 cursor TRACE get_port_profile()
+2013-05-20 21:31:27,936 distance TRACE get_port_profile()
+2013-05-20 21:31:27,936 ir TRACE get_port_profile()
+2013-05-20 21:31:27,936 rumble TRACE get_port_profile()
+2013-05-20 21:31:27,936 leds TRACE get_port_profile()
+2013-05-20 21:31:27,937 leds TRACE setPortRef()
+2013-05-20 21:31:27,937 buttons TRACE getProfile()
+2013-05-20 21:31:27,937 accel TRACE getProfile()
+2013-05-20 21:31:27,937 orientation TRACE getProfile()
+2013-05-20 21:31:27,937 cursor TRACE getProfile()
+2013-05-20 21:31:27,937 distance TRACE getProfile()
+2013-05-20 21:31:27,937 ir TRACE getProfile()
+2013-05-20 21:31:27,937 rumble TRACE getProfile()
+2013-05-20 21:31:27,937 leds TRACE getProfile()
+2013-05-20 21:31:27,937 rumble TRACE disconnect_all()
+2013-05-20 21:31:27,937 rumble DEBUG disconnecting 0 connections.
+2013-05-20 21:31:27,937 rumble TRACE getProfile()
+2013-05-20 21:31:27,938 buttons TRACE get_port_profile()
+2013-05-20 21:31:27,938 accel TRACE get_port_profile()
+2013-05-20 21:31:27,938 orientation TRACE get_port_profile()
+2013-05-20 21:31:27,938 cursor TRACE get_port_profile()
+2013-05-20 21:31:27,938 distance TRACE get_port_profile()
+2013-05-20 21:31:27,938 ir TRACE get_port_profile()
+2013-05-20 21:31:27,938 rumble TRACE get_port_profile()
+2013-05-20 21:31:27,939 rumble TRACE setPortRef()
+2013-05-20 21:31:27,939 buttons TRACE getProfile()
+2013-05-20 21:31:27,939 accel TRACE getProfile()
+2013-05-20 21:31:27,939 orientation TRACE getProfile()
+2013-05-20 21:31:27,939 cursor TRACE getProfile()
+2013-05-20 21:31:27,939 distance TRACE getProfile()
+2013-05-20 21:31:27,939 ir TRACE getProfile()
+2013-05-20 21:31:27,939 rumble TRACE getProfile()
+2013-05-20 21:31:27,939 ir TRACE disconnect_all()
+2013-05-20 21:31:27,939 ir DEBUG disconnecting 0 connections.
+2013-05-20 21:31:27,939 ir TRACE getProfile()
+2013-05-20 21:31:27,940 buttons TRACE get_port_profile()
+2013-05-20 21:31:27,940 accel TRACE get_port_profile()
+2013-05-20 21:31:27,940 orientation TRACE get_port_profile()
+2013-05-20 21:31:27,940 cursor TRACE get_port_profile()
+2013-05-20 21:31:27,940 distance TRACE get_port_profile()
+2013-05-20 21:31:27,940 ir TRACE get_port_profile()
+2013-05-20 21:31:27,940 ir TRACE setPortRef()
+2013-05-20 21:31:27,940 buttons TRACE getProfile()
+2013-05-20 21:31:27,940 accel TRACE getProfile()
+2013-05-20 21:31:27,940 orientation TRACE getProfile()
+2013-05-20 21:31:27,940 cursor TRACE getProfile()
+2013-05-20 21:31:27,941 distance TRACE getProfile()
+2013-05-20 21:31:27,941 ir TRACE getProfile()
+2013-05-20 21:31:27,941 distance TRACE disconnect_all()
+2013-05-20 21:31:27,941 distance DEBUG disconnecting 0 connections.
+2013-05-20 21:31:27,941 distance TRACE getProfile()
+2013-05-20 21:31:27,941 buttons TRACE get_port_profile()
+2013-05-20 21:31:27,941 accel TRACE get_port_profile()
+2013-05-20 21:31:27,941 orientation TRACE get_port_profile()
+2013-05-20 21:31:27,941 cursor TRACE get_port_profile()
+2013-05-20 21:31:27,941 distance TRACE get_port_profile()
+2013-05-20 21:31:27,942 distance TRACE setPortRef()
+2013-05-20 21:31:27,942 buttons TRACE getProfile()
+2013-05-20 21:31:27,942 accel TRACE getProfile()
+2013-05-20 21:31:27,942 orientation TRACE getProfile()
+2013-05-20 21:31:27,942 cursor TRACE getProfile()
+2013-05-20 21:31:27,942 distance TRACE getProfile()
+2013-05-20 21:31:27,942 cursor TRACE disconnect_all()
+2013-05-20 21:31:27,942 cursor DEBUG disconnecting 0 connections.
+2013-05-20 21:31:27,942 cursor TRACE getProfile()
+2013-05-20 21:31:27,942 buttons TRACE get_port_profile()
+2013-05-20 21:31:27,942 accel TRACE get_port_profile()
+2013-05-20 21:31:27,942 orientation TRACE get_port_profile()
+2013-05-20 21:31:27,943 cursor TRACE get_port_profile()
+2013-05-20 21:31:27,943 cursor TRACE setPortRef()
+2013-05-20 21:31:27,943 buttons TRACE getProfile()
+2013-05-20 21:31:27,943 accel TRACE getProfile()
+2013-05-20 21:31:27,943 orientation TRACE getProfile()
+2013-05-20 21:31:27,943 cursor TRACE getProfile()
+2013-05-20 21:31:27,943 orientation TRACE disconnect_all()
+2013-05-20 21:31:27,943 orientation DEBUG disconnecting 0 connections.
+2013-05-20 21:31:27,943 orientation TRACE getProfile()
+2013-05-20 21:31:27,943 buttons TRACE get_port_profile()
+2013-05-20 21:31:27,944 accel TRACE get_port_profile()
+2013-05-20 21:31:27,944 orientation TRACE get_port_profile()
+2013-05-20 21:31:27,944 orientation TRACE setPortRef()
+2013-05-20 21:31:27,944 buttons TRACE getProfile()
+2013-05-20 21:31:27,944 accel TRACE getProfile()
+2013-05-20 21:31:27,944 orientation TRACE getProfile()
+2013-05-20 21:31:27,944 accel TRACE disconnect_all()
+2013-05-20 21:31:27,945 accel DEBUG disconnecting 0 connections.
+2013-05-20 21:31:27,945 accel TRACE getProfile()
+2013-05-20 21:31:27,945 buttons TRACE get_port_profile()
+2013-05-20 21:31:27,945 accel TRACE get_port_profile()
+2013-05-20 21:31:27,945 accel TRACE setPortRef()
+2013-05-20 21:31:27,945 buttons TRACE getProfile()
+2013-05-20 21:31:27,945 accel TRACE getProfile()
+2013-05-20 21:31:27,945 buttons TRACE disconnect_all()
+2013-05-20 21:31:27,945 buttons DEBUG disconnecting 0 connections.
+2013-05-20 21:31:27,945 buttons TRACE getProfile()
+2013-05-20 21:31:27,945 buttons TRACE get_port_profile()
+2013-05-20 21:31:27,946 buttons TRACE setPortRef()
+2013-05-20 21:31:27,946 buttons TRACE getProfile()
+2013-05-20 21:31:27,946 rtobject TRACE finalizeContexts()
+2013-05-20 21:31:27,946 rtobject.periodic_ec TRACE stop()
+2013-05-20 21:31:27,946 rtobject.periodic_ec TRACE ~PeriodicExecutionContext()
+2013-05-20 21:31:27,946 rtobject DEBUG Cleanup on Manager
+2013-05-20 21:31:27,946 manager TRACE Manager.notifyFinalized()
+2013-05-20 21:31:27,946 rtobject TRACE getInstanceName()
+2013-05-20 21:31:27,946 rtobject TRACE getProperties()
+2013-05-20 21:31:27,947 manager TRACE Manager.shutdownNaming()
+2013-05-20 21:31:27,947 manager.namingmanager TRACE NamingManager::unbindAll(): 1 names.
+2013-05-20 21:31:27,947 manager.namingmanager TRACE NamingManager::unbindObject(asura.local.host_cxt/WiiRemoteTest0.rtc)
+2013-05-20 21:31:27,947 manager.namingoncorba TRACE unbindObject(name  = asura.local.host_cxt/WiiRemoteTest0.rtc)
+2013-05-20 21:31:27,948 manager TRACE Manager.shutdownORB()
+2013-05-20 21:31:27,948 manager DEBUG No pending works of ORB. Shutting down POA and ORB.
+2013-05-20 21:31:27,948 manager DEBUG POA Manager was deactivated.
+2013-05-20 21:31:27,948 manager DEBUG POA was destroyed.
+2013-05-20 21:31:27,948 manager DEBUG ORB was shutdown.
+2013-05-20 21:31:27,948 manager TRACE Manager.shutdownManager()
+2013-05-20 21:31:28,041 manager TRACE Manager.wait()
+2013-05-20 21:31:28,041 manager TRACE Manager.shutdownLogger()
