@@ -95,14 +95,14 @@ class WiiRemoteTest(OpenRTM_aist.DataFlowComponentBase):
 		"""
 		self._ledsOut = OpenRTM_aist.OutPort("leds", self._d_leds)
 
-
+                """
 		self.buttons = [False] * 12
 		self.cursor  = [0, 0]
 		self.ir      = [0, 0]
 		self.distance = 0
 		self.accel   = [0, 0, 0]
 		self.orientation = [0, 0, 0]
-		
+		"""
 		self.rumble = False
 		self.leds   = [False] * 4
 
@@ -195,9 +195,14 @@ class WiiRemoteTest(OpenRTM_aist.DataFlowComponentBase):
 	#	# @return RTC::ReturnCode_t
 	#	#
 	#	#
-	#def onActivated(self, ec_id):
-	#
-	#	return RTC.RTC_OK
+	def onActivated(self, ec_id):
+            self.buttons = [False] * 11
+            self.accel = RTC.AngularAcceleration3D(0, 0, 0)
+            self.orientation = RTC.Orientation3D(0, 0, 0)
+            self.cursor = RTC.Point2D(0, 0)
+            self.distance = 0
+            self.ir = RTC.Point2D(0, 0)
+            return RTC.RTC_OK
 	
 	#	##
 	#	#
@@ -224,13 +229,39 @@ class WiiRemoteTest(OpenRTM_aist.DataFlowComponentBase):
 		#
 		#
 	def onExecute(self, ec_id):
-		sys.stdout.write('BUTTONS ')
+
                 if self._buttonsIn.isNew():
                     data = self._buttonsIn.read()
                     self.buttons = data.data
-		for b in self.buttons:
-			sys.stdout.write('T' if b else 'F')
-		print (" ")
+
+                if self._accelIn.isNew():
+                    data = self._accelIn.read()
+                    self.accel = data.data
+
+                if self._orientationIn.isNew():
+                    data = self._orientationIn.read()
+                    self.orientation = data.data
+
+                if self._irIn.isNew():
+                    data = self._irIn.read()
+                    self.ir = data.data
+
+                if self._cursorIn.isNew():
+                    data =  self._cursorIn.read()
+                    self.cursor = data.data
+
+
+                sys.stdout.write('[WiiRemoteTest] buttons:')
+                for b in self.buttons:
+                    sys.stdout.write('T' if b else 'F')
+                sys.stdout.write('\n')
+                
+                sys.stdout.write('[WiiRemoteTest] accel: aax=%3.3f, aay=%3.3f, aaz=%3.3f\n' % (self.accel.aax, self.accel.aay, self.accel.aaz))
+                sys.stdout.write('[WiiRemoteTest] orientation: r=%3.3f, p=%3.3f, y=%3.3f\n' % (self.orientation.r, self.orientation.p, self.orientation.y))
+                sys.stdout.write('[WiiRemoteTest] cursor: x=%3.3f, y=%3.3f\n' % (self.cursor.x, self.cursor.y))
+                sys.stdout.write('[WiiRemoteTest] distance: d=%3.3f\n' % self.distance)
+                sys.stdout.write('[WiiRemoteTest] ir: x=%3.3f, y=%3.3f\n' % (self.ir.x, self.ir.y))
+
 		return RTC.RTC_OK
 	
 	#	##
